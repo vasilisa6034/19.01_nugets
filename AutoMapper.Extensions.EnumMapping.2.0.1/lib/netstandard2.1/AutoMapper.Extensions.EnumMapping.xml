@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoMapper.Extensions.EnumMapping</name>
+    </assembly>
+    <members>
+        <member name="T:AutoMapper.Extensions.EnumMapping.EnumMapperConfigurationExpressionExtensions">
+            <summary>
+            Extension class to support validation for EnumMappings
+            </summary>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.EnumMapperConfigurationExpressionExtensions.EnableEnumMappingValidation(AutoMapper.IMapperConfigurationExpression)">
+            <summary>
+            Enable EnumMapping configuration validation
+            </summary>
+            <param name="mapperConfigurationExpression">Configuration object for AutoMapper</param>
+        </member>
+        <member name="T:AutoMapper.Extensions.EnumMapping.EnumMappingExpressionExtensions">
+            <summary>
+            Extension class to support EnumMapping
+            </summary>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.EnumMappingExpressionExtensions.ConvertUsingEnumMapping``2(AutoMapper.IMappingExpression{``0,``1})">
+            <summary>
+            Skip member mapping and use a EnumMapping converter convention to convert to the destination type
+            </summary>
+            <remarks>Not used for LINQ projection (ProjectTo)</remarks>
+            <param name="mappingExpression">Mapping configuration options</param>
+            <typeparam name="TSource">Source enum type</typeparam>
+            <typeparam name="TDestination">Destination enum type</typeparam>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.EnumMappingExpressionExtensions.ConvertUsingEnumMapping``2(AutoMapper.IMappingExpression{``0,``1},System.Action{AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression{``0,``1}})">
+            <summary>
+            Skip member mapping and use a EnumMapping converter convention to convert to the destination type
+            </summary>
+            <remarks>Not used for LINQ projection (ProjectTo)</remarks>
+            <param name="mappingExpression">Mapping configuration options</param>
+            <param name="options">Callback for Mapping configuration options</param>
+            <typeparam name="TSource">Source enum type</typeparam>
+            <typeparam name="TDestination">Destination enum type</typeparam>
+        </member>
+        <member name="T:AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression`2">
+            <summary>
+            Enum configuration options
+            </summary>
+            <typeparam name="TSource">Source type for Enum mapping</typeparam>
+            <typeparam name="TDestination">Destination type for Enum mapping</typeparam>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression`2.MapByName(System.Boolean)">
+            <summary>
+            Map enum values by name
+            </summary>
+            <param name="ignoreCase">Optional, ignore casing for enum value names</param>
+            <returns>Enum configuration options</returns>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression`2.MapByValue">
+            <summary>
+            (default) Map enum values by value (underlying value type)
+            </summary>
+            <returns>Enum configuration options</returns>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression`2.MapValue(`0,`1)">
+            <summary>
+            Map enum value from source to destination value
+            </summary>
+            <returns>Enum configuration options</returns>
+        </member>
+        <member name="T:AutoMapper.Extensions.EnumMapping.IEnumMappingExpression`2">
+            <summary>
+            Skip member mapping and use a EnumMapping converter convention to convert to the destination type
+            </summary>
+            <remarks>Not used for LINQ projection (ProjectTo)</remarks>
+            <typeparam name="TSource">Source type for Enum mapping</typeparam>
+            <typeparam name="TDestination">Destination type for Enum mapping</typeparam>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.IEnumMappingExpression`2.ReverseMap">
+            <summary>
+            Create a type mapping from the <typeparamref name="TDestination"/> type to the <typeparamref name="TSource"/> type, using the existing configuration for <typeparamref name="TSource"/> type to <typeparamref name="TDestination"/> type.
+            </summary>
+        </member>
+        <member name="M:AutoMapper.Extensions.EnumMapping.IEnumMappingExpression`2.ReverseMap(System.Action{AutoMapper.Extensions.EnumMapping.IEnumConfigurationExpression{`1,`0}})">
+            <summary>
+            Create a type mapping from the <typeparamref name="TDestination"/> type to the <typeparamref name="TSource"/> type, using the existing configuration for <typeparamref name="TSource"/> type to <typeparamref name="TDestination"/> type.
+            </summary>
+            <param name="options">Callback for reverse mapping configuration options</param>
+        </member>
+    </members>
+</doc>
